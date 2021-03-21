@@ -1,30 +1,114 @@
 package grades;
 
 import grades.Student;
+import java.util.HashMap;
 
 public class GradesApplication {
     public static void main(String[] args) {
+        HashMap<String, Student> students = new HashMap<>();
+
+        Student Patrick = new Student("Patrick");
+        Patrick.addGrade(10);
+        Patrick.addGrade(20);
+        Patrick.addGrade(15);
+
+        Student Sandy = new Student("Sandy");
+        Sandy.addGrade(85);
+        Sandy.addGrade(90);
+        Sandy.addGrade(92);
+
+        Student Plankton = new Student("Plankton");
+        Plankton.addGrade(99);
+        Plankton.addGrade(98);
+        Plankton.addGrade(96);
+
+        Student Crabs = new Student("Crabs");
+        Crabs.addGrade(75);
+        Crabs.addGrade(82);
+        Crabs.addGrade(61);
 
 
-// We'll start by defining a hash map
-        HashMap<String, String> usernames = new HashMap<>();
 
-// and putting some data into it
-        usernames.put("Ryan", "ryanorsinger");
-        usernames.put("Zach", "zgulde");
-        usernames.put("Fernando", "fmendozaro");
-        usernames.put("Justin", "jreich5");
-
-        System.out.println(usernames);
-// {Ryan=ryanorsinger, Zach=zgulde, Fernando=fmendozaro, Justin=jreich5}
-
-// obtaining values from the hash map by key
-        usernames.get("Ryan"); // "ryanorsinger"
-        usernames.get("Phillip"); // null
-        usernames.getOrDefault("Jason", "gocodeup"); // "gocodeup"
-
-// checking if keys or values are present
-        usernames.containsKey("Justin"); // true
-        usernames.containsValue("fmendozaro"); // true
     }
 }
+
+
+
+//================ W A L K T H R O U G H    A N S W E R  =====================//
+
+//package grades;
+//
+//        import grades.Student;
+//        import util.Input;
+//
+//        import java.util.ArrayList;
+//        import java.util.HashMap;
+//
+//public class GradesApplication  {
+//    public static void main(String[] args) {
+//
+//        HashMap<String, Student> students = new HashMap<>();
+//
+//
+//        Student Gordon = new Student("Gordon");
+//        Gordon.addGrade(100);
+//        Gordon.addGrade(72);
+//        Gordon.addGrade(81);
+//
+//
+//
+//
+////        HashMap<String, ArrayList> students= new HashMap<>();
+////        Student Gordon = new Student("Gordon");
+////        Gordon.addGrade(100);
+////        Gordon.addGrade(72);
+////        Gordon.addGrade(81);
+//        Student Zac = new Student("Zac");
+//        Zac.addGrade(72);
+//        Zac.addGrade(72);
+//        Zac.addGrade(84);
+//        Student Vanessa = new Student("Vanessa");
+//        Vanessa.addGrade(72);
+//        Vanessa.addGrade(98);
+//        Vanessa.addGrade(80);
+//        Student Gerald = new Student("Gerald");
+//        Gerald.addGrade(72);
+//        Gerald.addGrade(98);
+//        Gerald.addGrade(80);
+//
+//
+//        students.put("Gordon", Gordon);
+//        students.put("ZtecFive", Zac);
+//        students.put("Gt88",Gerald);
+//        students.put("fleabag815",Vanessa);
+//
+//
+//        System.out.println(Gordon.getGrade());
+//        cli(students);
+//    }
+//
+//    public static void cli(HashMap<String,Student> students) {
+//        Input input = new Input();
+//        System.out.println("Welcome!\n" +
+//                "\n" +
+//                "Here are the GitHub usernames of our students:");
+//        for(String ghUserName :students.keySet()){
+//            System.out.println(ghUserName+" ");
+//        }
+//        do {
+//            System.out.println("What student would you like to see more information on?");
+//            String username = input.getString();
+//            if (students.containsKey(username)) {
+//                System.out.printf("\n" +
+//                                "Name: %s - GitHub Username: %s\n" +
+//                                "Current Average: %f", students.get(username).getName(),
+//                        username,
+//                        students.get(username).getGradeAverage());
+//            } else {
+//                System.err.println("Sorry, no student found with the GitHub username of " + username);
+//            }
+//            System.out.println("Would you like to see another student?");
+//        } while(input.yesNo(""));
+//
+//    }
+//}
