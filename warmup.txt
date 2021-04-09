@@ -1,0 +1,48 @@
+With your breakout room, take turns answering the following questions:
+
+What are the differences between GET vs. POST and why use one over the other?
+
+Quick java tutorial on Difference between GET and POST method in HTTP. Both GET and POST method is used to transfer data from client
+to server in HTTP protocol but Main difference between POST and GET method is that GET carries request parameter appended in URL string
+while POST carries request parameter in message body which makes it more secure way of transferring data from client to server in http protocol.
+
+
+What is Maven?
+
+Maven is a build automation tool used primarily for Java projects
+Maven addresses two aspects of building software: how software is built, and its dependencies.
+ It comes with pre-defined targets for performing certain well-defined tasks such as compilation of code and its packaging.
+ Maven dynamically downloads Java libraries and Maven plug-ins from one or more repositories such as the Maven 2
+
+
+What is a JAR? WAR?
+The JAR files are the files that have Java class files, associated metadata and resources aggregated into a single file to execute a Java application.
+Whereas, the WAR files are the files that contain Servlet, JSP, HTML, JavaScript and other files necessary for developing web applications.
+
+What is Tomcat?
+Apache Tomcat is an open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.
+Tomcat provides a "pure Java" HTTP web server environment in which Java code can run
+Tomcat is the piece of software that handles the lower level networking details of accepting HTTP requests and forwarding them on to our code
+that can interact with the requests at a higher level.
+
+
+What is a Java Servlet?
+A servlet is a Java class that extends the HttpServlet class from the servlet library. A servlet's most basic functionality is to handle HTTP requests and responses.
+Servlets also allow us to create dynamic web pages with Java
+Servlet is a class that handles requests, processes them and reply back with a response.
+
+What is a JSP?
+JSP stands for Java Server Pages. JSP allows us to create HTML pages with dynamic content by letting us mix Java code into our HTM
+
+In a JSP, what is the difference between <%@ %>, <!% %>, <%= %>, and <% %>?
+
+
+Is there a difference between the following two ways of including a navbar other than syntax?
+
+  <jsp:include page=“partials/navbar.jsp”></jsp:include>
+
+    vs.
+  <%@ include file=“partials/navbar.jsp” %>
+
+
+What is JSTL?
