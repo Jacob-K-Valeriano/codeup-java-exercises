@@ -44,5 +44,15 @@ Is there a difference between the following two ways of including a navbar other
     vs.
   <%@ include file=“partials/navbar.jsp” %>
 
+  58
+
+  There's a huge difference. As has been mentioned, <%@ include is a static include, <jsp:include is a dynamic include. Think of it as a difference between a macro and a function call (if you are familiar with those terms). Another way of putting it,
+  a static include is exactly the same thing as copy-pasting the exact content of the included file (the "code") at the location of the <%@ include statement (which is exactly what the JSP compiler will do.
+
+  A dynamic include will make a request (using the request dispatcher) that will execute the indicated page and then include the output from the page in the output of the calling page, in place of the <jsp:include statement.
+
+  The big difference here is that with a dynamic include, the included page will execute in it's own pageContext. And since it's a request, you can send parameters to the page the same way you can send parameters along with any other request.
+   A static include, on the other hand, is just a piece of code that will execute inside the context of the calling page. If you statically include the same file more than once, the code in that file will exist in multiple locations on the calling page so something like
+
 
 What is JSTL?
