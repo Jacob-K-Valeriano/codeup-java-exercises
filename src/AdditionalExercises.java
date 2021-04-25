@@ -1,19 +1,8 @@
 import java.util.*;
 public class AdditionalExercises {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Input an integer number: ");
-        int x = in.nextInt();
-        System.out.printf("The absolute value of %d is: %d", x, convert(x));
-        System.out.printf("\n");
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Input a number: ");
-        int num = scan.nextInt();
-        if (num > 0)
-            System.out.println("Count the numbers without digit 7, from 1 to " + num + ": " + count_nums_not_7(num));
-    }
 
-    private static void count_nums_not_7(int num) {
+    public static boolean count_nums_not_7(int num) {
+        return false;
     }
 
     public static int convert(int n) {
@@ -40,4 +29,23 @@ public class AdditionalExercises {
                 return count_nums_not_7(m * r - 1);
         }
     }
+
+
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input an integer number: ");
+        int x = in.nextInt();
+        System.out.printf("The absolute value of %d is: %d", x, convert(x));
+        System.out.print("\n");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        int num = scan.nextInt();
+        if (num > 0)
+            System.out.println("Count the numbers without digit 7, from 1 to " + num + ": " );
+        System.out.println(count_nums_not_7(num));
+    }
+
+
 }
