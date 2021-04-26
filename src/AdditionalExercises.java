@@ -31,8 +31,6 @@ public class AdditionalExercises {
     }
 
 
-
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Input an integer number: ");
@@ -43,9 +41,26 @@ public class AdditionalExercises {
         System.out.print("Input a number: ");
         int num = scan.nextInt();
         if (num > 0)
-            System.out.println("Count the numbers without digit 7, from 1 to " + num + ": " );
+            System.out.println("Count the numbers without digit 7, from 1 to " + num + ": ");
         System.out.println(count_nums_not_7(num));
+
     }
+
+    // Fizzbuzz
+
+    public  static String fizzBuzz (int i) {
+        if (i % 3 == 0) {
+            if (i % 5 == 0) {
+                return "fizzbuzz";
+            } else {
+                return "fizz";
+            }
+        } else if (i %5 == 0) {
+            return "buzz";
+        }
+        return  String.valueOf(i);
+    }
+
 
 
 }
